@@ -25,13 +25,15 @@ To build and run this application locally, you need:
 
 ## Localhost Setup & Running Guide
 
-### 1. Clone & Navigate
+### Option A: Using Terminal / Command Line
+
+#### 1. Clone & Navigate
 Clone the repository (or navigate to the project directory):
 ```bash
 cd userjourney
 ```
 
-### 2. Build the Application
+#### 2. Build the Application
 Use the Maven wrapper to clean and build the project:
 
 - **On Windows (PowerShell / Command Prompt):**
@@ -44,7 +46,7 @@ Use the Maven wrapper to clean and build the project:
   ./mvnw clean package
   ```
 
-### 3. Run the Application
+#### 3. Run the Application
 You can run the application using Maven:
 
 - **On Windows:**
@@ -61,6 +63,38 @@ Alternatively, run the compiled executable JAR file directly:
 ```bash
 java -jar target/userjourney-0.0.1-SNAPSHOT.jar
 ```
+
+---
+
+### Option B: Using IntelliJ IDEA IDE
+
+#### 1. Open the Project
+1. Launch **IntelliJ IDEA**.
+2. Click **File** > **Open...** (or select **Open** on the Welcome screen).
+3. Select the `userjourney` root directory containing the `pom.xml` file.
+4. Select **Open as Project**. IntelliJ will automatically detect Maven and sync all dependencies.
+
+#### 2. Configure JDK 21
+1. Go to **File** > **Project Structure...** (`Ctrl + Alt + Shift + S` / `Cmd + ;`).
+2. Under **Project Settings** > **Project**, set **SDK** to **21 (Java 21)**.
+3. Ensure **Language level** is set to `SDK default` or `21 - Sequel to preview features / Java 21`.
+4. Click **Apply** and **OK**.
+
+#### 3. Enable Annotation Processing (Required for Lombok)
+1. Go to **Settings** (`Ctrl + Alt + S` on Windows/Linux) or **Preferences** (`Cmd + ,` on macOS).
+2. Navigate to **Build, Execution, Deployment** > **Compiler** > **Annotation Processors**.
+3. Check the box for **Enable annotation processing**.
+4. Click **Apply** and **OK**.
+
+#### 4. Run the Application
+- **Method 1 (Main Class):**
+  1. In the Project tool window (`Alt + 1`), navigate to [`src/main/java/com/project/userjourney/UserjourneyApplication.java`](file:///c:/github/userjourney/src/main/java/com/project/userjourney/UserjourneyApplication.java).
+  2. Right-click [`UserjourneyApplication.java`](file:///c:/github/userjourney/src/main/java/com/project/userjourney/UserjourneyApplication.java) and select **Run 'UserjourneyApplication'** (or click the green ▶ play icon next to the `main` method).
+
+- **Method 2 (Maven Tool Window):**
+  1. Open the **Maven** tool window on the right sidebar (`View` > `Tool Windows` > `Maven`).
+  2. Expand `userjourney` > `Plugins` > `spring-boot`.
+  3. Double-click **`spring-boot:run`**.
 
 The application will start on port **`8080`** by default.
 
