@@ -100,42 +100,6 @@ The application will start on port **`8080`** by default.
 
 ---
 
-### Option C: Using Visual Studio Code (VS Code)
-
-#### 1. Recommended Extensions
-Install the following extensions from the VS Code Marketplace:
-- **Extension Pack for Java** (Microsoft)
-- **Spring Boot Extension Pack** (VMware)
-- **Lombok Annotations Support for VS Code** (Gabriel B. R.)
-
-#### 2. Open the Project
-1. Launch **Visual Studio Code**.
-2. Go to **File** > **Open Folder...** (`Ctrl + K, Ctrl + O` / `Cmd + O`).
-3. Select the `userjourney` workspace folder.
-4. VS Code will automatically detect the Maven project and prompt to import Java projects.
-
-#### 3. Configure Java SDK 21
-1. Open the Command Palette (`Ctrl + Shift + P` / `Cmd + Shift + P`).
-2. Type and select **Java: Configure Java Runtime**.
-3. Under **Project JDKs**, ensure the Java Toolchain / Project SDK is pointing to **JDK 21**.
-
-#### 4. Run the Application
-- **Method 1 (Code Lens):**
-  1. Open [`src/main/java/com/project/userjourney/UserjourneyApplication.java`](file:///c:/github/userjourney/src/main/java/com/project/userjourney/UserjourneyApplication.java).
-  2. Click the **Run** or **Debug** button that appears above `public static void main` (Line 9).
-
-- **Method 2 (Spring Boot Dashboard):**
-  1. Click on the **Spring** icon on the left Activity Bar to open the Spring Boot Dashboard.
-  2. Find `userjourney` under Apps and click the **Start** ▶ icon.
-
-- **Method 3 (Built-in Terminal):**
-  1. Open terminal (`Ctrl + ` `).
-  2. Run `.\mvnw.cmd spring-boot:run` (Windows) or `./mvnw spring-boot:run` (macOS/Linux).
-
-The application will start on port **`8080`** by default.
-
----
-
 ## API Documentation & Access Points
 
 Once the server is running on localhost, access the following URLs:
